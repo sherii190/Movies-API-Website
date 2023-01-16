@@ -82,3 +82,54 @@
       </div>
   </section>
   <!-- END SHOW MOVIES -->
+
+ <!-- CONTACT US -->
+ <section id="contactUS">
+  <div class="container userForm">
+      <h1 class="mb-5">Contact Us...</h1>
+      <div class="row ">
+          <div class="col-md-6 form-group" id="name">
+              <input onkeyup="validateName(this.value)" type="text" placeholder="Enter your name" class="w-100 mb-3" id="nameInp">
+              <div class="alert alert-danger" id="nameAlert" role="alert">
+                  Your name is not valid.
+              </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+              <input onkeyup="validateEmail(this.value)" type="text" placeholder="Enter your E-mail" class="w-100 mb-3" id="emailInp">
+              <div class="alert alert-danger" id="emailAlert" role="alert">
+                  Your e-mail is not valid.
+              </div>
+          </div>
+          <div class="col-md-6 form-group">
+              <input onkeyup="validatePhone(this.value)" type="text" placeholder="Enter Phone" class="w-100 mb-3" id="phoneInp">
+              <div class="alert alert-danger" id="phoneAlert" role="alert">
+                  Your phone number is not valid
+              </div>
+          </div>
+          <div class="col-md-6 form-group">
+              <input onkeyup="validateAge(this.value)" type="text" placeholder="Enter Age" class="w-100 mb-3" id="ageInp">
+              <div class="alert alert-danger" id="ageAlert" role="alert">
+                  Your age is not valid (between 10 to 100) 
+              </div>
+          </div>
+          <div class=" col-md-6 form-group">
+              <input onkeyup="validatePw(this.value)" type="text" placeholder="Enter Password" class="w-100 mb-3" id="pwInp">
+              <div class="alert alert-danger" id="pwAlert" role="alert">
+                  Entre valid password *Minimum eight characters, at least one letter and one number:* 
+              </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+              <input onkeyup="validateRePw(this.value)" type="text" placeholder="Enter Repassword" class="w-100 mb-3" id="rePwInp">
+              <div class="alert alert-danger" id="rePwAlert" role="alert">
+                  Entre valid Repassword.
+              </div>
+          </div>
+
+          <button onclick="submit()" class="btn btn-outline-danger ">Submit</button>
+
+      </div>
+  </div>
+</section>
+<!-- END CONTACT US -->
