@@ -1,0 +1,226 @@
+/*css*/
+
+body {
+  background-color: black;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+/******************************************************/
+
+/******************************/
+
+#loading
+{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
+  background-color: black;
+}
+.spinner {
+  margin: 300px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  border-radius: 100%;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/******************************/
+#options-container
+{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+
+.drawer
+{
+  background-color: #f8f6f6;;
+text-align: center;
+  position: relative;
+width: 60px;
+height: 100vh;}
+
+.drawerLogo img 
+{
+height: 50px;
+}
+
+.drawerMenu
+{
+  position: absolute;
+  cursor: pointer;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.drawerMenu i 
+{
+font-size: 25px;
+}
+
+.drawerSocial
+{
+  position: absolute;
+  cursor: pointer;
+bottom: 20px;
+left: 50%;
+transform: translate(-50%);
+}
+
+.navMenu 
+{
+  background-color: black;
+width: 15.63rem;
+height: 100vh;
+}
+.navMenu  ul 
+{
+  padding-left: 30px;
+  padding-top: 15px;
+height: 300px;
+overflow: hidden;
+}
+.navMenu  li
+{
+  list-style-type: none;
+  opacity: 0;
+  margin-top: 500px;
+}
+.navList ul li a 
+{
+color: #f9f6f6;
+  font-size: 16px;
+}
+.navList ul li a:hover , .navSocial  a:hover
+{
+  color: #ff655c;
+  text-decoration: none;
+transition:all 0.3s;
+}
+.navSocial
+{
+  color: gray;
+  position: absolute;
+bottom: 44px;
+left: 20px;
+}
+.navSocial  a 
+{
+color: #f9f6f6;
+padding-left: 15px;
+}
+.navSocial h5
+{   padding: 10px;
+  font-size: 14px;
+}
+
+
+/*********************************/
+.searchMovieInput{
+  background-color: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid grey;
+  text-align: center;
+}
+
+.userForm input{
+  background-color: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid grey;
+}
+
+.userForm h1{
+  color: white;
+
+}
+
+.onMovie
+{
+  position: relative;
+  overflow: hidden;       
+}
+
+
+.movieLayer
+{
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition:  all 0.8s ease-in;
+  text-align: center;
+  color: black;
+}
+
+.onMovie:hover .movieLayer
+{
+  top: 0;
+}
+/**************************************/
+#nameAlert, #phoneAlert, #ageAlert, #emailAlert, #pwAlert, #rePwAlert
+{
+  display: none;    
+}
+
+/*******************/
+#btnUp
+{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 555;
+  display: none;
+}
