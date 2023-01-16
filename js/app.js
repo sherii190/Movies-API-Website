@@ -208,3 +208,24 @@ $(window).on("load", function () {
   })
 })
 //END LOADING SCREEN///////////////////
+
+//BUTTON UP//////////////////////////////////////////////
+let searchBarOffset = $("#searchMovieID").offset().top;
+
+$(window).scroll(function () {
+
+    let winScroll = $(window).scrollTop();
+
+    if (winScroll > searchBarOffset) {
+
+        $("#btnUp").fadeIn(500);
+    }
+    else {
+        $("#btnUp").fadeOut(500);
+    }
+})
+$("#btnUp").click(function () {
+
+    $("html, body").animate({ scrollTop: '0' }, 1000);
+})
+//END BUTTON UP//////////////////////////////////////////////
