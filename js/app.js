@@ -199,3 +199,12 @@ function searchMovie(term) {
 }
 
 //END SEARCH MOVIE ////////////////////
+
+//LOADING SCREEN///////////////////
+$(window).on("load", function () {
+  $("#loading").fadeOut(1000, function () {
+      $("body").css("overflow", "auto");
+      clearForm();
+  })
+})
+//END LOADING SCREEN///////////////////
