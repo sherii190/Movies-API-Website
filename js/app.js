@@ -172,3 +172,30 @@ function displayData() {
     document.getElementById("moviesRow").innerHTML = temp;
 }
 //END GET MOVIES DATA/////////////////
+
+//SEARCH MOVIE////////////////////////////
+function searchMovie(term) {
+  var temp = ``;
+  for (var i = 0; i < allData.length; i++) {
+      if (allData[i].original_title.toLowerCase().includes(term.toLowerCase())) {
+          temp += `
+      <div class="col-md-6 col-lg-4 my-3">
+        <div class="movieShow ">
+          <div class="onMovie">
+              <img src="https://image.tmdb.org/t/p/w500`+ allData[i].poster_path + `" class="img-fluid"/>
+              <div class="movieLayer d-flex align-items-center">
+                  <div class="movieInfo">
+                      <h5>`+ allData[i].original_title + `</h5>
+                      <p>`+ allData[i].overview + `</p>
+                      <p> Rate: `+ allData[i].vote_average + `</p>
+                  </div>
+              </div>
+           </div>
+        </div>
+      </div>`;
+      }
+  }
+  document.getElementById("moviesRow").innerHTML = temp;
+}
+
+//END SEARCH MOVIE ////////////////////
