@@ -93,3 +93,30 @@ $("#pwAlert").css("marginTop", `-15px`);
 $("#rePwAlert").css("marginTop", `-15px`);
 
 //END VALIDATION////////////////////////////////
+
+// VALIDATE FORM ///////////////////////
+function submit() {
+
+  var userName = document.getElementById("nameInp").value;
+  var email = document.getElementById("emailInp").value;
+  var phone = document.getElementById("phoneInp").value;
+  var age = document.getElementById("ageInp").value;
+  var pw = document.getElementById("pwInp").value;
+  var rePw = document.getElementById("rePwInp").value;
+
+  if (validateName(userName) == true || validateEmail(email) == true || validatePhone(phone) == true || validateAge(age) == true || validatePw(pw) == true || validateRePw(rePw) == true) {
+
+  }
+  else {
+      //window.alert("Not Valid Input")
+  }
+}
+
+function clearForm() {
+  let ips = $("input");
+  for (let i = 0; i < ips.length; i++) {
+      ips[i].value = "";
+  }
+}
+
+// END VALIDATE FORM ///////////////////////
