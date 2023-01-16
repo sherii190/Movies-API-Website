@@ -20,3 +20,76 @@ $("#toggleNav").click(function () {
     }
 })
 //END SIDE NAV BAR///////////////////////////////////////////////
+
+//VALIDATE DATA ////////////////////////////////////////////////
+function validateName(inputValue) {
+  var nameRegex = /^[a-z][a-z ]{1,20}$/i;
+  if (nameRegex.test(inputValue) == false) {
+      $("#nameAlert").css("display", "block");
+  }
+  else {
+      $("#nameAlert").css("display", "none");
+  }
+}
+
+function validateEmail(inputValue) {
+  var emailRegex = /^([a-zA-Z][a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  if (emailRegex.test(inputValue) == false) {
+      $("#emailAlert").css("display", "block");
+  }
+  else {
+      $("#emailAlert").css("display", "none");
+  }
+}
+
+function validatePhone(inputValue) {
+  var phoneRegex = /^(\+02)?(01)[0125][0-9]{8}$/;
+  if (phoneRegex.test(inputValue) == false) {
+      $("#phoneAlert").css("display", "block");
+  }
+  else {
+      $("#phoneAlert").css("display", "none");
+  }
+}
+
+function validateAge(inputValue) {
+  var ageRegex = /([1-9][0-9]{1,2})$/;
+  if (ageRegex.test(inputValue) == false) {
+      $("#ageAlert").css("display", "block");
+  }
+  else {
+      $("#ageAlert").css("display", "none");
+  }
+}
+
+function validatePw(inputValue) {
+  var pwRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
+  if (pwRegex.test(inputValue) == false) {
+      $("#pwAlert").css("display", "block");
+  }
+  else {
+      $("#pwAlert").css("display", "none");
+  }
+}
+
+function validateRePw(inputValue) {
+  let pw = $("#pwInp").val();
+  let rePw = $("#rePwInp").val();
+  if (pw != rePw) {
+      $("#rePwAlert").css("display", "block");
+      return false;
+  }
+  else {
+      $("#rePwAlert").css("display", "none");
+      return true;
+  }
+}
+
+$("#nameAlert").css("marginTop", `-15px`);
+$("#emailAlert").css("marginTop", `-15px`);
+$("#phoneAlert").css("marginTop", `-15px`);
+$("#ageAlert").css("marginTop", `-15px`);
+$("#pwAlert").css("marginTop", `-15px`);
+$("#rePwAlert").css("marginTop", `-15px`);
+
+//END VALIDATION////////////////////////////////
